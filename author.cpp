@@ -2,6 +2,7 @@
 #define UNTILTED1_AUTHOR_H
 #include <iostream>
 #include <string>
+#include <vector>
 class Author{
 private: 
     std::string name;

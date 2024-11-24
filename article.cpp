@@ -2,6 +2,7 @@
 #define ARTICLE_H
 #include <iostream>
 #include <string>
+#include <vector>
 #include "author.cpp"
 
 class Article{

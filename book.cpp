@@ -7,18 +7,20 @@
 #include "article.cpp"
 #include "chapter.cpp"
 
+using namespace std;
+
 class Book {
 private:
-    std::string title;
+    string title;
     Author author;
     int publicationYear;
-    std::vector <Chapter> chapters;
+    vector <Chapter> chapters;
 
 public:
     Book()
-    : title(""), author(Author()), publicationYear(2023), chapters() {};
+    : title(""), author(Author()), publicationYear(0), chapters({}) {};
 
-    Book(std::string bookTitle, Author bookAuthor, int year, std::vector <Chapter> &bookChapters)
+    Book(const string bookTitle, const Author bookAuthor, int year, const vector <Chapter> &bookChapters)
     : title(bookTitle), author(bookAuthor), publicationYear(year), chapters(bookChapters) {};
 
     void addChapter(Chapter &chapter) {
@@ -26,22 +28,22 @@ public:
     };
 
     void displayInfo() {
-        std::cout << "Skibidi Ohio Rizz Sigma Mostek Gyat";
+        std::cout << "Skibidi Ohio Rizz Sigma Mostek";
     };
 
-    std::string getTitle() {
+    string getTitle() const {
         return title;
     };
 
-    Author getAuthor() {
+    Author getAuthor() const {
         return author;
     };
 
-    int getPublicationYear() {
+    int getPublicationYear() const {
         return publicationYear;
     };
 
-    std::vector <Chapter> Book::getChapters() {
+    vector <Chapter> getChapters() {
         return chapters;
     };
 
